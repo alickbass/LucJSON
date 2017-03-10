@@ -12,6 +12,7 @@
 		CEAC7C7C1E72B303000DACCC /* LucJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAC7C6E1E72B303000DACCC /* LucJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEAC7C861E72B5AD000DACCC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC7C851E72B5AD000DACCC /* JSON.swift */; };
 		CEAC7C8A1E72E755000DACCC /* JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC7C891E72E755000DACCC /* JSONTests.swift */; };
+		CEAC7C8C1E72EDD0000DACCC /* JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC7C8B1E72EDD0000DACCC /* JSONSerialization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		CEAC7C7B1E72B303000DACCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEAC7C851E72B5AD000DACCC /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		CEAC7C891E72E755000DACCC /* JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTests.swift; sourceTree = "<group>"; };
+		CEAC7C8B1E72EDD0000DACCC /* JSONSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerialization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				CEAC7C6E1E72B303000DACCC /* LucJSON.h */,
 				CEAC7C851E72B5AD000DACCC /* JSON.swift */,
+				CEAC7C8B1E72EDD0000DACCC /* JSONSerialization.swift */,
 				CEAC7C6F1E72B303000DACCC /* Info.plist */,
 			);
 			path = LucJSON;
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAC7C8C1E72EDD0000DACCC /* JSONSerialization.swift in Sources */,
 				CEAC7C861E72B5AD000DACCC /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

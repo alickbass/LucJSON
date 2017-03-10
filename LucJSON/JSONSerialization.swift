@@ -102,7 +102,7 @@ extension JSON {
         
         /* Write JSON data into a stream. The stream should be opened and configured. The return value is the number of bytes written to the stream, or 0 on error. All other behavior of this method is the same as the dataWithJSONObject:options:error: method.
          */
-        public static func writeJSON(_ json: JSON, toStream stream: OutputStream, options opt: WritingOptions) throws -> Int {
+        public static func writeJSONObject(_ json: JSON, toStream stream: OutputStream, options opt: WritingOptions) throws -> Int {
             let jsonData = try _data(withJSON: json, options: opt, stream: true)
             let count = jsonData.count
             return jsonData.withUnsafeBytes { (bytePtr: UnsafePointer<UInt8>) -> Int in

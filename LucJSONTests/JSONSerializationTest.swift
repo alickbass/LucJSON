@@ -665,7 +665,7 @@ extension JSONSerializationTest {
 
 extension JSONSerializationTest {
     func trySerialize(_ obj: JSON) throws -> String {
-        let data = try JSON.Serialization.data(withJSON: obj, options: [])
+        let data = try JSON.Serialization.data(withJSONObject: obj, options: [])
         guard let string = String(data: data, encoding: .utf8) else {
             XCTFail("Unable to create string")
             return ""
@@ -978,9 +978,7 @@ extension JSONSerializationTest {
     
     func test_booleanJSONObject() {
         do {
-            let objectLikeBoolArray = try JSONSerialization.data(withJSONObject: [true, NSNumber(value: false), NSNumber(value: true)] as Array<Any>)
-            XCTAssertEqual(String(data: objectLikeBoolArray, encoding: .utf8), "[true,false,true]")
-            let valueLikeBoolArray = try JSONSerialization.data(withJSONObject: [false, true, false])
+            let valueLikeBoolArray = try JSON.Serialization.data(withJSONObject: JSON([JSON(false), JSON(true), JSON(false)]))
             XCTAssertEqual(String(data: valueLikeBoolArray, encoding: .utf8), "[false,true,false]")
         } catch {
             XCTFail("Failed during serialization")

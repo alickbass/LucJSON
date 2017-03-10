@@ -39,7 +39,7 @@ extension JSON {
         
         /* Generate JSON data from a JSON object. If the object will not produce valid JSON then an exception will be thrown. Setting the WritingOptions.prettyPrinted option will generate JSON with whitespace designed to make the output more readable. If that option is not set, the most compact possible JSON will be generated. The resulting data is a encoded in UTF-8.
          */
-        static func _data(withJSON value: JSON, options opt: WritingOptions, stream: Bool) throws -> Data {
+        static func _data(withJSONObject value: JSON, options opt: WritingOptions, stream: Bool) throws -> Data {
             var jsonStr = String()
             
             var writer = Writer(
@@ -63,8 +63,8 @@ extension JSON {
             return result
         }
         
-        public static func data(withJSON value: JSON, options opt: WritingOptions = []) throws -> Data {
-            return try _data(withJSON: value, options: opt, stream: false)
+        public static func data(withJSONObject value: JSON, options opt: WritingOptions = []) throws -> Data {
+            return try _data(withJSONObject: value, options: opt, stream: false)
         }
         
         /* Create a JSON object from JSON data. Set the NSJSONReadingAllowFragments option if the parser should allow top-level objects that are not an Array or Dictionary. If an error occurs during the parse, then the error parameter will be set and the result will be nil.
@@ -103,7 +103,7 @@ extension JSON {
         /* Write JSON data into a stream. The stream should be opened and configured. The return value is the number of bytes written to the stream, or 0 on error. All other behavior of this method is the same as the dataWithJSONObject:options:error: method.
          */
         public static func writeJSONObject(_ json: JSON, toStream stream: OutputStream, options opt: WritingOptions) throws -> Int {
-            let jsonData = try _data(withJSON: json, options: opt, stream: true)
+            let jsonData = try _data(withJSONObject: json, options: opt, stream: true)
             let count = jsonData.count
             return jsonData.withUnsafeBytes { (bytePtr: UnsafePointer<UInt8>) -> Int in
                 let res: Int = stream.write(bytePtr, maxLength: count)

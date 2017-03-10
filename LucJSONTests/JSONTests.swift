@@ -24,12 +24,14 @@ class JSONTests: XCTestCase {
     }
     
     func testOptionalValues() {
+        XCTAssertTrue(JSON.null.isNull)
         XCTAssertEqual(JSON.number(4).number, NSNumber(value: 4))
         XCTAssertEqual(JSON.bool(true).bool, true)
         XCTAssertEqual(JSON.string("test").string, "test")
         XCTAssertEqual(JSON.object(["test": .bool(true)]).object!, ["test": .bool(true)])
         XCTAssertEqual(JSON.array([.string("test"), .string("test")]).array!, [.string("test"), .string("test")])
         
+        XCTAssertFalse(JSON.bool(true).isNull)
         XCTAssertNil(JSON.bool(true).number)
         XCTAssertNil(JSON.number(4).bool)
         XCTAssertNil(JSON.number(4).string)

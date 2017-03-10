@@ -45,6 +45,13 @@ extension JSON: Equatable {
 }
 
 public extension JSON {
+    public var isNull: Bool {
+        switch self {
+        case .null: return true
+        default: return false
+        }
+    }
+    
     public var number: NSNumber? {
         switch self {
         case let .number(value): return value

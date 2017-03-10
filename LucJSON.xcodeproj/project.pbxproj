@@ -11,6 +11,7 @@
 		CEAC7C7A1E72B303000DACCC /* LucJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC7C791E72B303000DACCC /* LucJSONTests.swift */; };
 		CEAC7C7C1E72B303000DACCC /* LucJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAC7C6E1E72B303000DACCC /* LucJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEAC7C861E72B5AD000DACCC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC7C851E72B5AD000DACCC /* JSON.swift */; };
+		CEAC7C8A1E72E755000DACCC /* JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC7C891E72E755000DACCC /* JSONTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		CEAC7C791E72B303000DACCC /* LucJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucJSONTests.swift; sourceTree = "<group>"; };
 		CEAC7C7B1E72B303000DACCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEAC7C851E72B5AD000DACCC /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		CEAC7C891E72E755000DACCC /* JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAC7C791E72B303000DACCC /* LucJSONTests.swift */,
+				CEAC7C891E72E755000DACCC /* JSONTests.swift */,
 				CEAC7C7B1E72B303000DACCC /* Info.plist */,
 			);
 			path = LucJSONTests;
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAC7C7A1E72B303000DACCC /* LucJSONTests.swift in Sources */,
+				CEAC7C8A1E72E755000DACCC /* JSONTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

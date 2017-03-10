@@ -43,3 +43,40 @@ extension JSON: Equatable {
         }
     }
 }
+
+public extension JSON {
+    public var number: NSNumber? {
+        switch self {
+        case let .number(value): return value
+        default: return nil
+        }
+    }
+    
+    public var bool: Bool? {
+        switch self {
+        case let .bool(value): return value
+        default: return nil
+        }
+    }
+    
+    public var string: String? {
+        switch self {
+        case let .string(value): return value
+        default: return nil
+        }
+    }
+    
+    public var object: [String: JSON]? {
+        switch self {
+        case let .object(value): return value
+        default: return nil
+        }
+    }
+    
+    public var array: [JSON]? {
+        switch self {
+        case let .array(value): return value
+        default: return nil
+        }
+    }
+}

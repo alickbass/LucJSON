@@ -10,6 +10,7 @@
 		CEAC7C751E72B303000DACCC /* LucJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAC7C6B1E72B303000DACCC /* LucJSON.framework */; };
 		CEAC7C7A1E72B303000DACCC /* LucJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC7C791E72B303000DACCC /* LucJSONTests.swift */; };
 		CEAC7C7C1E72B303000DACCC /* LucJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAC7C6E1E72B303000DACCC /* LucJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEAC7C861E72B5AD000DACCC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC7C851E72B5AD000DACCC /* JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		CEAC7C741E72B303000DACCC /* LucJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LucJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC7C791E72B303000DACCC /* LucJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucJSONTests.swift; sourceTree = "<group>"; };
 		CEAC7C7B1E72B303000DACCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAC7C851E72B5AD000DACCC /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAC7C6E1E72B303000DACCC /* LucJSON.h */,
+				CEAC7C851E72B5AD000DACCC /* JSON.swift */,
 				CEAC7C6F1E72B303000DACCC /* Info.plist */,
 			);
 			path = LucJSON;
@@ -149,6 +152,7 @@
 					CEAC7C6A1E72B303000DACCC = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7H6SM4X3H7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					CEAC7C731E72B303000DACCC = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAC7C861E72B5AD000DACCC /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,8 @@
 		CEAC7C801E72B303000DACCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7H6SM4X3H7;
@@ -335,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.violentoctopus.LucJSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -342,6 +350,8 @@
 		CEAC7C811E72B303000DACCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7H6SM4X3H7;
@@ -362,6 +372,7 @@
 		CEAC7C831E72B303000DACCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7H6SM4X3H7;
 				INFOPLIST_FILE = LucJSONTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +385,7 @@
 		CEAC7C841E72B303000DACCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7H6SM4X3H7;
 				INFOPLIST_FILE = LucJSONTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

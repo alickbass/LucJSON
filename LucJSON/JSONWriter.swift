@@ -36,16 +36,16 @@ extension JSON {
         
         mutating func serializeJSON(_ json: JSON) throws {
             switch json {
-            case .string(let str):
-                try serializeString(str)
+            case .null:
+                serializeNull()
             case .bool(let boolValue):
                 serializeBool(boolValue)
+            case .string(let str):
+                try serializeString(str)
             case .array(let array):
                 try serializeArray(array)
             case .object(let dict):
                 try serializeDictionary(dict)
-            case .null:
-                try serializeNull()
             case .number(let number):
                 try serializeNumber(number)
             }
@@ -155,7 +155,7 @@ extension JSON {
             writer("}")
         }
         
-        func serializeNull() throws {
+        func serializeNull() {
             writer("null")
         }
         
